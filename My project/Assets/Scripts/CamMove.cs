@@ -5,8 +5,8 @@ using UnityEngine;
 public class CamMove : MonoBehaviour
 {
 
-    //variable 
-    public GameObject target;
+    //variable for the game
+    public GameObject target;                                   //determine what object is the camera going to follow
 
 
     // Start is called before the first frame update

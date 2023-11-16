@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         speed = 10f;
         jump = 400f;
+
         rb = GetComponent<Rigidbody2D>();       //get the rigidbody of the object
 
         maxHealth = 3;                  //set max health to two

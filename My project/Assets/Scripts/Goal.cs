@@ -20,7 +20,7 @@ public class Goal : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
 
-        if (other.gameObject.CompareTag("player"))
+        if (other.gameObject.CompareTag("player"))              //if the object colling is the player
         {
             SceneManager.LoadScene("Level2");
         }

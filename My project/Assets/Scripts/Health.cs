@@ -38,22 +38,7 @@ public class Health : MonoBehaviour
     }
 
 
-    void OntriggerEnter2D(Collider2D coll)
-    {
-        if (coll.tag == "Player")
-        {
-            damage.TakeDamage(1);
-        }
-        
-        if (coll.tag == "Wall" && left == true)
-        {
-            left = false;
-        }
-
-        else if(coll.tag == "Wall" && left == false)
-        {
-            left = true;
-        }
+    
 
 
     }  
