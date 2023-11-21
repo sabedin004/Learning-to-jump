@@ -5,26 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
+    // Called when a Collision is detected
     void OnCollisionEnter2D(Collision2D other)
     {
-
-        if (other.gameObject.CompareTag("player"))              //if the object colling is the player
+        if (other.gameObject.CompareTag("Player"))  //if the object colling with is the player
         {
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("Level2");       //move to the Level2
         }
-
     }
-
 }

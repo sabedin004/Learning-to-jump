@@ -9,9 +9,8 @@ public class Health : MonoBehaviour
     public int maxHealth;       //determines max amount of health the player can have
     public int currentHealth;   //tracks current health of the player
 
-
-    public GameObject health1;
-    public GameObject health2;
+    public GameObject hp1;
+    public GameObject hp2;
 
 
     // Start is called before the first frame update
@@ -21,30 +20,22 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;      //set current health to max health
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    void TakeDamage(int amount)
+    public void TakeDamage(int amount)
     {
         currentHealth -= amount;                        //lower health
+
+        if (currentHealth == 2)
+        {
+            hp2.SetActive(false);
+        }
+        if (currentHealth == 1)
+        {
+            hp1.SetActive(false);
+        }
 
         if (currentHealth <= 0)                         //if health equal zero
         {
             SceneManager.LoadScene("GameOver");         //go to GameOver Scene
         }
     }
-
-
-    
-
-
-    }  
-        
-
-
-
-
 }
